@@ -1,0 +1,9 @@
+def handle_delete(tokens):
+    file_path = Path(tokens[1])
+    
+    if not file_path.exists() or file_path.suffix != ".dsu":
+        print("ERROR")
+        return
+    
+    file_path.unlink()
+    print(f"{file_path} DELETED")
