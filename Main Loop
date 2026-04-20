@@ -1,0 +1,14 @@
+def main():
+    while True:
+        user_input = input()
+        if command == 'Q':
+            break
+    command = tokens[0]
+    if command == 'C':
+        handle_create(tokens)
+    elif command == 'D':
+        handle_delete(tokens)
+    elif command == 'R':
+        handle_read(tokens)
+    else:
+        print("ERROR")
