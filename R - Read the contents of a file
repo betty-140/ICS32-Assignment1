@@ -1,0 +1,13 @@
+def handle_read(tokens):
+    file_path = Path(tokens[1])
+    
+    if not file_path.exists() or file_path.suffix != ".dsu":
+        print("ERROR")
+        return
+    
+    content = file_path.read_text()
+    
+    if content == "":
+        print("EMPTY")
+    else:
+        print(content)
