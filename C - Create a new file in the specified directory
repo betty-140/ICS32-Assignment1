@@ -1,0 +1,16 @@
+from pathlib import Path
+
+def handle_create(tokens):
+    # expect: C path -n filename
+    
+    path = Path(tokens[1])
+    name = tokens[3]   # after -n
+    
+    file_path = path / (name + ".dsu")
+    
+    if not path.exists() or file_path.exists():
+        print("ERROR")
+        return
+    
+    file_path.touch()
+    print(file_path)
