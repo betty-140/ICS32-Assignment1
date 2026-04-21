@@ -1,14 +1,40 @@
-def main():
-    while True:
-        user_input = input()
-        if command == 'Q':
-            break
+def process_command(user_input):
+    """
+    Returns False when user wants to quit, otherwise True.
+    """
+    try:
+        tokens = shlex.split(user_input)
+    except Exception:
+        print("ERROR")
+        return True
+
+    if len(tokens) == 0:
+        print("ERROR")
+        return True
+
     command = tokens[0]
-    if command == 'C':
+
+    if command == "Q":
+        if len(tokens) == 1:
+            return False
+        print("ERROR")
+        return True
+
+    if command == "C":
         handle_create(tokens)
-    elif command == 'D':
+    elif command == "D":
         handle_delete(tokens)
-    elif command == 'R':
+    elif command == "R":
         handle_read(tokens)
     else:
         print("ERROR")
+
+    return True
+
+
+def main():
+    running = True
+    while running:
+        user_input = input()
+        running = process_command(user_input)
+
