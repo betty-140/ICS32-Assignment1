@@ -67,6 +67,10 @@ def handle_delete(tokens):
 
 # R - Read the contents of a file.
 def handle_read(tokens):
+    """
+    Expected format:
+    R <filepath>
+    """
     if len(tokens) != 2:
         print("ERROR")
         return
