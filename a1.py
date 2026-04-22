@@ -13,9 +13,9 @@ import shlex
 
 # C - Create a new file in the specified directory.
 """
-    Expected format:
-    C <directory> -n <filename>
-    """
+Expected format:
+C <directory> -n <filename>
+"""
 def handle_create(tokens):
     if len(tokens) != 4:
         print("ERROR")
