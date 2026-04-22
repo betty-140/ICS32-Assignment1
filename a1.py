@@ -44,6 +44,10 @@ def handle_create(tokens):
         print("ERROR")
 
 # D - Delete the file
+    """
+    Expected format:
+    D <filepath>
+    """
 def handle_delete(tokens):
     if len(tokens) != 2:
         print("ERROR")
