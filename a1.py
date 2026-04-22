@@ -121,7 +121,7 @@ def process_command(user_input):
 
     return True
 
-# main
+# main function
 def main():
     running = True
     while running:
