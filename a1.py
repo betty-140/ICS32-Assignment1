@@ -92,9 +92,6 @@ def handle_read(tokens):
 
 # run the command and catch exceptions
 def process_command(user_input):
-    """
-    Returns False when user wants to quit, otherwise True.
-    """
     try:
         tokens = shlex.split(user_input)
     except Exception:
