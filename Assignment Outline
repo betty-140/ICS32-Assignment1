@@ -1,6 +1,0 @@
-Outline:
-while True:
-    user_input = input()
-    parse
-    define command functions (C / D / R / Q)
-    call corresponding function
